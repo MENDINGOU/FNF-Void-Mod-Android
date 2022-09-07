@@ -35,6 +35,11 @@ class OptionsSubState extends MusicBeatSubstate
 
 	override function update(elapsed:Float)
 	{
+		
+		#if android
+                addVirtualPad(LEFT_FULL, A_B);
+                #end
+		
 		super.update(elapsed);
 
 		if (controls.UP_P)
