@@ -52,6 +52,12 @@ class GameOverSubstate extends MusicBeatSubstate
 
 	override function update(elapsed:Float)
 	{
+		
+		#if android
+		addVirtualPad(NONE, A_B);
+		addPadCamera();
+                #end
+		
 		super.update(elapsed);
 
 		if (controls.ACCEPT)
